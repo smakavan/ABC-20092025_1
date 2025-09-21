@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 
 module "network_vm" {
-  source = "./module"
+  source = "./modules/network_vm"
 
   resource_group_name = var.resource_group_name
   location            = var.location
