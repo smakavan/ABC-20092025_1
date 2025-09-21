@@ -30,6 +30,6 @@ steps:
     autoApprove: true
 
 - script: |
-    chmod +x ./validate_connectivity.sh
-    ./validate_connectivity.sh $(terraform output -raw vm1_public_ip) $(terraform output -raw vm2_private_ip) ~/.ssh/id_rsa
+    chmod +x ./validate_shell.sh
+    ./validate_shell.sh $(terraform output -raw vm1_public_ip) $(terraform output -raw vm2_private_ip) ~/home/sachin/.ssh/mykeysac
   displayName: 'Validate Private Connectivity'
