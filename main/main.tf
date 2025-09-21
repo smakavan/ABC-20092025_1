@@ -12,6 +12,11 @@ provider "azurerm" {
   subscription_id = "a0c353b6-cb40-4e36-a692-5ce1da78943d"
 }
 
+terraform {
+  backend "azurerm" {
+  }
+}
+
 module "network_vm" {
   source = "./modules/network_vm"
 
