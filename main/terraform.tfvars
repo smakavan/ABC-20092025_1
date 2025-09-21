@@ -1,0 +1,4 @@
+admin_username = "azureuser"
+resource_group_name = "Eval4-sac"
+location = "West Us 3"
+admin_ssh_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDml1KYVlJ3Xt7Yrv3ORoyipUUvCodl+yOArhJa8MAek/OTRbbYMptdq9KMhsQ71C2wNNXeDjCoCJLgC/G4idNYWkYB2bpw6minANpOP/MasbtE274pskPT9XArR/o+Qd6e6s+AbKo/G1oPI5GW84d5CGEOA4nF6BoLV003ZWBO4RvNXMgrW7MEy4hAS22cHejflbu3D6JZnisB438/db+8WY9i/fIl1n6s0kQg2TPXCfT9MEtWgX6ybnvYrdTDO/NS62bf9zCawOUbEtxw37DUQeU7GmDlDObtpwRdAYP1aGEojeb3r88Np/XxStdMRnRGKL87cm7OvBQ4lRZk4raX sachin@ubuntu"
