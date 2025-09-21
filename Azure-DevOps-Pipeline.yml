@@ -8,6 +8,7 @@ steps:
   displayName: 'Terraform : init'
   inputs:
     command: init
+    workingDirectory: 'main'
     environmentServiceNameAzureRM: 2037d4e0-22e8-4b5c-85ae-2e6f1f795ecd
     backendType: 'azurerm'
     backendServiceArm: 2037d4e0-22e8-4b5c-85ae-2e6f1f795ecd
@@ -20,16 +21,19 @@ steps:
   displayName: 'Terraform : plan'
   inputs:
     command: plan
+    workingDirectory: 'main'
     environmentServiceNameAzureRM: 2037d4e0-22e8-4b5c-85ae-2e6f1f795ecd
 
 - task: TerraformTask@5
   displayName: 'Terraform : apply'
   inputs:
     command: apply
+    workingDirectory: 'main'
     environmentServiceNameAzureRM: 2037d4e0-22e8-4b5c-85ae-2e6f1f795ecd
     autoApprove: true
 
 - script: |
     chmod +x ./validate_shell.sh
-    ./validate_shell.sh $(terraform output -raw vm1_public_ip) $(terraform output -raw vm2_private_ip) ~/home/sachin/.ssh/mykeysac
+    ./validate_shell.sh $(terraform -chdir=main output -raw vm1_public_ip) $(terraform -chdir=main output -raw vm2_private_ip) ~/.ssh/mykeysac
   displayName: 'Validate Private Connectivity'
+
